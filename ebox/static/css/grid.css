@@ -1,0 +1,126 @@
+html, body {
+    margin:0;
+    padding:0;
+    min-width:150px;
+}
+.wrap {
+    float:left;
+    position:relative;
+}
+.foto {
+    width: 150px;
+    height: 150px;
+    background: gold;
+    position:absolute;
+}
+
+#warning{display:none;}
+@media screen and (min-width: 631px) {
+    .wrap {
+        width:20%;
+        padding-bottom:25%;
+    }
+    .wrap:nth-child(4n+2), .wrap:nth-child(4n+3){
+
+    }
+    .wrap .foto {
+        top:-75px;
+        margin-top:100%;
+        right:-30px;
+    }
+    .wrap:nth-child(4n+2){
+        margin:0 5% 0 7.5%;
+    }
+    .wrap:nth-child(4n+3){
+     margin-right:7.5%;
+    }
+    .wrap:nth-child(4n+2) .foto{
+        left:50%;
+        margin-left:-75px;
+    }
+    .wrap:nth-child(4n+3) .foto{
+        right:50%;
+        margin-right:-75px;
+    }
+    .wrap:nth-child(4n) .foto{
+        left:-30px;
+    }
+    #container{
+        margin-top:-45px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 631px) {
+    .wrap {
+        width:25%;
+        padding-bottom:33.3%;
+    }
+    .wrap:nth-child(3n+2){
+        margin:0 12.5%;
+    }
+    .wrap .foto {
+        top:-75px;
+        margin-top:100%;
+        right:-37px;
+    }
+     .wrap:nth-child(3n+2) .foto{
+        left:50%;
+        margin-left:-75px;
+    }
+     .wrap:nth-child(3n) .foto{
+        left:-37px;
+    }
+    #container{
+        margin-top:-37px;
+    }
+}
+
+
+@media screen and (min-width: 331px) and (max-width: 480px) {
+    .wrap {
+        width:33.3%;
+        padding-bottom:50%;
+        clear:left;
+    }
+    .wrap:nth-child(even) {
+        float:right;
+        clear:right;
+    }
+    .wrap .foto {
+        top:-75px;
+        margin-top:100%;
+        right:-50px;
+    }
+    .wrap:nth-child(even) .foto {
+        left:-50px;
+    }
+    .wrap:nth-child(4n+3) .foto, .wrap:nth-child(4n+4) .foto {
+        bottom:-75px;
+        margin-bottom:100%;
+    }
+    #container{
+        margin-top:-25px;
+    }
+}
+
+
+@media screen and (max-width: 330px) {
+    .wrap {
+        width:50%;
+        padding-bottom:100%;
+        clear:left;
+    }
+    .wrap:nth-child(odd) .foto {
+        right:-75px;
+        bottom:0;
+        bottom:-75px;
+        margin-bottom:100%;
+    }
+    .wrap:nth-child(even) .foto {
+        top:0px;
+        right:-75px;
+        top:-75px;
+        margin-top:100%;
+    }
+}
+

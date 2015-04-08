@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'landing'
+    'campaign',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -95,3 +95,15 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'twittomyates@gmail.com'  # this is my email address, use yours
+EMAIL_HOST_PASSWORD = 'kendoll1'   # set environ yourself
+
+ADMINS = (
+    ('Tom Yates', 'twittomyates@gmail.com'),   # email will be sent to your_email
+)
+
+MANAGERS = ADMINS

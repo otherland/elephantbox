@@ -91,12 +91,17 @@ h6 { font-size: 20px; line-height: 30px; font-weight: 400; text-transform: upper
 
 /* Custom Typography */
 h1.title { font-size: 65px; color: #FFF; margin-bottom: 50px; }
-h2.title { vertical-align: middle; display: table-cell; letter-spacing: -2px; }
+/*h2.title { vertical-align: middle; display: table-cell; letter-spacing: -2px; }*/
+h2.title {
+    display: block;
+    font-size: 60px;
+    margin-top: 70px;
+}
 span.title { font-family: 'Oswald', sans-serif; font-size: 35px; font-weight: 300; color: #FFF; display: table; text-transform: uppercase; line-height: 23px; margin: 15px 0 0 0; }
 .fetaure-details span { font-weight: 300; }
 .count-box p { color: #fff; font-size: 16px; font-weight: 400; }
 .description { font-size: 18px; vertical-align: middle; display: table-cell; font-weight: 300 }
-.big { font-size: 45px; margin-bottom: 43px; line-height: 45px; }
+.big { font-size: 45px; margin-bottom: 43px; line-height: 55px; }
 .light { font-size: 20px; color: #5e5e5e; margin: 83px 0 0; }
 .light-gray { color: #909090 }
 .contact-title { font-size: 15px; font-weight: bold; display: table; margin-bottom: 6px; text-transform: uppercase; }
@@ -287,7 +292,7 @@ section { overflow: hidden; padding-top: 90px; padding-bottom: 90px; }
 #conter-box { padding: 0; }
 .contact { padding: 0 0 65px; }
 #conter-box .color-overlay { padding-top: 90px; padding-bottom: 90px; }
-#testimonial .color-overlay { padding-top: 129px; padding-bottom: 120px; background: none repeat scroll 0 0 rgba(0, 0, 0, 0.85) }
+
 #blog-list { padding-top: 110px; }
 #blog-details { padding-top: 110px; }
 .map { padding:0 !important ; position: relative; }
@@ -297,7 +302,7 @@ section { overflow: hidden; padding-top: 90px; padding-bottom: 90px; }
 ========================================================================== */
 
 /* Header */
-header { background: url() no-repeat center top; -webkit-background-size: cover; background-size: cover; height: 100%; -webkit-transition: ease-in-out; -moz-transition: ease-in-out; -o-transition: ease-in-out; transition: ease-in-out; overflow: hidden; }
+header {no-repeat center top; -webkit-background-size: cover; background-size: cover; height: 100%; -webkit-transition: ease-in-out; -moz-transition: ease-in-out; -o-transition: ease-in-out; transition: ease-in-out; overflow: hidden; }
 .no-background { background: none }
 header .full-screen { width: 100%; height: 100%; min-height: 1000px; }
 .navbar-nav > li.blog:hover .dropdown-menu { display: block !important; }
@@ -385,7 +390,7 @@ header .intro-section .buttons { margin: 17px auto; float: none; display: inline
 
 /* Grid Style */
 .grid { margin: 0 auto; }
-.grid li { float: left; cursor: pointer; }
+.grid li { float: left; }
 .grid figure { -webkit-transition: opacity 0.2s; transition: opacity 0.2s; }
 
 /* Slideshow Style */
@@ -433,7 +438,7 @@ span.nav-close:before { content: "X"; font-family: 'Open Sans', sans-serif; tran
 .blog-img { opacity: 1; transition: all 400ms ease-in-out 0s; height: 100%; width: 100%; }
 .blog .active { margin-bottom: 0; }
 .blog .active .blog-content-out { display: block !important; }
-.blog-image { padding: 0; background-color: #000 }
+
 .blog-day { background-color: #f96015; border: 2px solid #f96015; color: #fff; display: table-cell; font-family: 'Oswald', sans-serif; font-size: 50px; font-weight: 400; height: 94px; left: 3%; position: absolute; top: 59%; width: 94px; z-index: 9999; }
 .blog-day span { left: 0; position: absolute; right: 0; top: 35px; vertical-align: middle; }
 .blog-content:hover .blog-day { border: 4px solid #fff; background-color: #f96015; color: #fff; }
@@ -698,9 +703,11 @@ footer .color-overlay { padding: 46px 0 0; }
 .work-count-box .content-white { width: 75%; }
 
 /* Testimonial */
-.testimonial { background: url() no-repeat center top fixed; -webkit-background-size: cover; background-size: cover; }
+.testimonial { background: url(../img/big.jpg) no-repeat center top fixed; -webkit-background-size: cover; background-size: cover; }
 .testimonial-int { background: url() no-repeat center top fixed; -webkit-background-size: cover; background-size: cover; }
 .testimonial .container { overflow: hidden; line-height: 30px; }
+#testimonial .color-overlay { padding-top: 129px; padding-bottom: 120px; background: none repeat scroll 0 0 rgba(0, 0, 0, 0.85) }
+.testimonial .reviews i { font-size: 25px; margin: 0 8px 25px 0; }
 
 /* Carousel */
 .carousel-inner { overflow: visible; display: inline-table; }
@@ -781,33 +788,13 @@ canvas { width: 63%; }
 .coming-soon #counter .first { border-left: 0px; }
 .coming-soon #counter .number { font-size: 60px; text-align: center; font-weight: 700; line-height: 60px; }
 .coming-soon #counter span { display: block; font-size: 16px; text-align: center; font-weight: 400; }
-.coming-soon { height: 100%; position: relative; width: 100%; }
-.coming-soon #home { background: url() center top scroll; width: 100%; height: 100%; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; position: absolute; }
-.coming-soon #home #counter { color: #ffffff; font-size: 50px; }
-.coming-soon .home { margin: 0 auto; }
-.coming-soon .home .text { color: #fff; font-size: 16px; font-weight: 300; margin-bottom: 5%; margin-left: auto; margin-right: auto; width: 500px; }
-.coming-soon .home form { float: none; margin: 0 auto; border-radius: 0px; padding: 0px; }
-.coming-soon .input-group { padding: 5px; border: 1px solid rgba(255, 255, 255, 0.7); }
-.coming-soon .home form input { background-color: transparent; border: 0 none; border-radius: 0; color: #fff; padding: 7px; width: 576px; margin: 0; font-size: 14px; }
-.coming-soon .home form .validation { background-color: #ff8f8f; }
-.coming-soon #successmsg { margin-top: 17px; color: #fff; background-color: #f96015; padding: 10px 0 10px; font-family: 'Oswald', sans-serif; text-transform: uppercase; display: none; transition: all 800ms ease-in-out 0s; -moz-transition: all 800ms ease-in-out 0s; -webkit-transition: all 800ms ease-in-out 0s; -o-transition-duration: all 800ms ease-in-out 0s; }
-.coming-soon #successmsg1 { margin-top: 25px; margin-bottom: 52px; font-size: 18px; color: #fff; background-color: #1dc607; padding: 10px 0 10px; font-family: 'Oswald', sans-serif; text-transform: uppercase; display: none; }
-.coming-soon .home button { background-color: #ffffff; color: #000000; border: 0px; border-radius: 0px; padding: 4px 12px; cursor: pointer; width: 120px; height: 30px; float: right; }
-.coming-soon .home button span { font-size: 12px; font-weight: bold; text-transform: uppercase; white-space: pre; }
-.coming-soon .home button:hover { background-color: #f96015; color: #FFF; }
-.coming-soon .social { clear: both; }
-.coming-soon .social ul { margin: 5% 0 0 0; padding: 0; }
-.coming-soon .social ul.contact { margin: 3.2% 0 0 0 }
-.coming-soon .social ul li { display: inline-block; margin: 0 15px; }
-.coming-soon .social ul li a { color: #FFF; font-size: 20px; display: inline-block; float: left; outline: none; }
-.coming-soon .social ul li a i { margin: 0; }
-.coming-soon .social ul li a:hover i { color: #f96015 !important; }
-.coming-soon .home form input.not-valid { background-color: rgba(255, 0, 0,0.2); }
-.coming-soon.main { display: table; width: 100%; margin: 0 auto; height: 100%; padding: 0px; }
-.coming-soon .main .page { text-align: center; vertical-align: middle; position: relative; z-index: 9999; width: 100%; }
-.coming-soon .container { width: 727px; margin: 4% auto 0; }
-.coming-soon .logo { margin: 0 0 6%; }
-.coming-soon .logo img { width: 201px; }
+
 .coming-soon .align-center { text-align: center }
 .coming-soon .center-block { display: block; margin-left: auto; margin-right: auto }
-.coming-soon .slider-overlay { height: 100%; width: 100%; position: absolute; background: rgba(0, 0, 0, .7); z-index: 11; }
+
+
+/* Book a Table */
+.book { background: url() no-repeat center top fixed; -webkit-background-size: cover; background-size: cover; }
+.book-a-table { background: none repeat scroll 0 0 rgba(51, 0, 51, 0.6); padding: 50px; float: none; margin: 75px auto 0; font-size: 55px; line-height: 65px; font-weight: 100; color: #FFF; }
+.book-a-table .highlight-button { font-size: 35px; font-weight: 500; background-color: #fff; color: #c70900; margin-top: 35px; display: inline-block; letter-spacing: 0; padding: 5px 35px; }
+#book .color-overlay { padding-top: 129px; padding-bottom: 120px; background: none repeat scroll 0 0 #3b3b3b }

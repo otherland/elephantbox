@@ -1,0 +1,56 @@
+{% extends "campaign/base.html" %}
+
+{% load staticfiles %}
+{% block content %}
+
+{% load staticfiles %}
+           <!-- contact -->
+            <section id="contact" class="contact gray-bg">
+                <div class="container">
+                    <div class="row border-bottom os-animation text-center" data-os-animation="fadeInUp">
+                        <div class="col-md-6 col-sm-6 title-text border-right">
+                            <h2 class="title">Contact</h2>
+                        </div>
+                        <div class="col-md-6 col-sm-6 simple-text">
+                            <p class="description text-left"><strong>How can we help you?</strong> We like to talk and on the strength of that you are invited for a coffee at our head office.</p>
+                        </div>
+                    </div>
+                    <div class="row contact-info os-animation" data-os-animation="fadeInUp">
+                        <div class="col-md-6 col-sm-6 left-part">
+                            <div class="head"> <span class="contact-title">how to reach us</span>
+                                <p class="content contact-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
+                            <div class="head"> <span class="contact-title">our address</span>
+                                <p class="content contact-text address">Sturlly Technologies<br>
+                                    PO Box 16122, Collins Street West,<br>
+                                    Victoria 8007, United States.</p>
+                            </div>
+                            <ul class="icon-list">
+                                <li><i class="fa fa-phone"></i>+61 123 456 7890</li>
+                                <li class="divider"></li>
+                                <li><i class="fa fa-envelope-o"></i><a href="mailto:no-reply@domain.com">no-reply@domain.com</a></li>
+                                <li class="divider"></li>
+                                <li><i class="fa fa-globe"></i><a href="javascript:;">www.domain.com</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-sm-6 right-part">
+                            <div class="form-group">
+                            {% if errors %}<ul>{% for error in errors %}<li>{{ error }}</li>{% endfor %}</ul>{% endif %}
+                            {% if success %}<p><strong>Thanks for the message! We'll be in touch shortly.</strong></p>{%endif%}
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input class="form-control" name="name" placeholder="Your Name" type="text">
+                                    <input class="form-control" name="subject" placeholder="Your Email" type="text">
+                                    <input class="form-control" name="website" placeholder="Your Website" type="text">
+                                    <textarea class="form-control" placeholder="Your Message" name="message"></textarea>
+                                    <button id="submit-button" class="small-button text-left">Send message</button>
+                            </div>
+                            <div id="success"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- contact end -->
+
+
+{% endblock content %}

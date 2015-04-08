@@ -1,0 +1,56 @@
+{% load staticfiles %}
+            <!-- header-->
+            <header style="background-position: 50% 4328.5px; background: url({% static "img/header-img.jpg" %});" id="home" data-stellar-background-ratio="0.5" class="header animated">
+                <nav class="navbar navbar-default navbar-fixed-top nav-transparent overlay-nav sticky-nav shrink-nav" role="navigation">
+                    <div class="container main-navigation">
+                        <div class="col-md-3 float-left"> <a class="logo-dark" href="{% url 'index' %}"><img alt="logo-dark" src="{% static "img/logo-dark.png" %}" class="logo-dark"></a> <a class="logo-light" href="{% url 'index' %}"><img alt="logo-white" src="{% static "img/logo-white.png" %}" class="logo-white"></a> </div>
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle Navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        </div>
+                        <div class="col-md-9 text-left float-right collapse-navation">
+                            <div class="navbar-collapse collapse navbar-inverse no-transition">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class=""><a id="nav-work" href="{% url 'shop' %}">Shop</a></li>
+                                    <li class=""><a id="nav-about" href="{% url 'about' %}">About</a></li>
+                                    <li class=""><a id="nav-expertise" href="{% url 'faq' %}">FAQ</a></li>
+                                    <!--li class=""><a id="nav-team" href="{% url 'care' %}">Customer Care</a></li-->
+                                    <li class=""><a id="nav-blog" href="{% url 'blog' %}">Blog</a></li>
+                                    <!--li class=""><a id="nav-giving" href="{% url 'giving' %}">Giving Back</a></li-->
+                                    <li class=""><a id="nav-contact" href="{% url 'contact' %}">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div style="min-height: 641px;" class="color-overlay full-screen">
+                    <!-- header text -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center">
+                                <div class="intro-section os-animation animated fadeIn" data-os-animation="fadeIn">
+                                <div class="logo">
+                                <img src="{% static "img/round_logo.png" %}">
+                                </div>
+                                    <h1 class="intro">
+                                    <span class="highlight">ELEPHANT BOX</span><br>
+                                        Stainless Steel Food Containers</h1>
+
+                                </div>
+
+                            <div class="coming-soon"><div id="counter"></div></div>
+                            </div>
+                        </div>
+
+<div class="row text-center">
+    <div class="col-md-8 col-sm-8 book-a-table">
+            We're almost ready...<br>
+            <a href="#contact" class="highlight-button inner-link" id="hrefabout">Pre-Order Now!</a>
+        </div>
+    </div>
+</div>
+                    </div>
+
+            </header>
+            <!-- header end -->
+
+

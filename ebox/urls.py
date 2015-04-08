@@ -7,6 +7,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^', include('landing.urls')),
+    url(r'^', include('campaign.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
