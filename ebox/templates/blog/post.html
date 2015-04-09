@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load django_markdown %}
+
+
+{% block content %}
+
+
+<!-- blog listing -->
+            <section id="blog-list" class="blog-list white-bg blog-page">
+                <div class="container">
+                    <div class="row">
+                        <!-- left content area -->
+                        <div class="col-md-8 col-sm-8 blog-left">
+                            <div class="blog-listing">
+                                <ul class="blog-post">
+
+                                    <li class="post-preview">
+                                        <div class="col-md-12 blog-wrapper no-padding"> <a href="{% url "entry_detail" slug=object.slug %}">
+                                        </a> </div>
+                                        <div class="col-md-12 col-sm-12 blog-content no-padding">
+                                            <div class="blog-title"> <span class="medium light-gray">{{ object.created }}</span>
+                                                <h3 class="title "><a href="{% url "entry_detail" slug=object.slug %}">{{ object.title }}</a></h3>
+                                               </div>
+                                            <article class="contentarea ">{{ object.body }}</article>
+
+                                            <div class="blog-share">
+                                                <div class="blogpost_share">
+                                                    <ul class="text-center">
+                                                        <li class="facebook"><a href="http://www.facebook.com/sharer/sharer.php?u={{current_path|urlencode}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                        <li class="twitter"><a href="http://twitter.com/share?url={{current_path|urlencode}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                        <li class="google-plus"><a href="https://plus.google.com/share?url={{current_path|urlencode}}" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- blog listing end -->
+                        <div id="disqus_thread"></div>
+                        </div>
+
+                        {% include "blog/sidebar.html" %}
+
+                    </div>
+                </div>
+
+            </section>
+            <!-- blog list end -->
+{% endblock content %}
+
+
+{% block footer-javascript %}
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'elephantbox';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+{% endblock footer-javascript %}

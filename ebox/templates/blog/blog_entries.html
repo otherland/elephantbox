@@ -1,0 +1,22 @@
+{% load endless %}
+
+{% lazy_paginate 2 entries %}
+
+{% for object in entries %}
+<li class="post-preview">
+
+<div class="col-md-12 col-sm-12 blog-content no-padding">
+    <div class="blog-title"> <span class="medium light-gray">{{ object.created }}</span>
+        <h3 class="title "><a href="{% url "entry_detail" slug=object.slug %}">{{ object.title }}</a></h3>
+       </div>
+    <article class="contentarea ">{{ object.body |truncatewords:140 }}</article>
+
+    <div class="blog-share"> <a class="small-button no-margin float-left" href="{% url "entry_detail" slug=object.slug %}">Continue Reading</a>
+
+    </div>
+</div>
+</li>
+{% endfor %}
+
+
+{% show_more  %}

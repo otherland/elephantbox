@@ -10,11 +10,11 @@ def contact(request):
     }
     if request.method == 'POST':
         if not request.POST.get('subject', ''):
-            payload['errors'].append('Enter a subject.')
+            payload['errors'].append('Please enter your email address.')
         if not request.POST.get('message', ''):
-            payload['errors'].append('Enter a message.')
-        if request.POST.get('email') and '@' not in request.POST['email']:
-            payload['errors'].append('Enter a valid e-mail address.')
+            payload['errors'].append('Please enter your message.')
+        #if request.POST.get('email') and '@' not in request.POST['email']:
+            #payload['errors'].append('Enter a valid e-mail address.')
         if not payload['errors']:
           try:
             send_mail(
@@ -42,11 +42,6 @@ def about(request):
 def care(request):
     template = loader.get_template('campaign/care.html')
     context = {'title':'Elephant Box | Customer Care'}
-    return HttpResponse(template.render(context))
-
-def blog(request):
-    template = loader.get_template('campaign/blog.html')
-    context = {'title':'Elephant Box | Blog'}
     return HttpResponse(template.render(context))
 
 def giving(request):

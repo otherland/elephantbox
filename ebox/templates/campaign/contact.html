@@ -1,4 +1,4 @@
-{% extends "campaign/base.html" %}
+{% extends "base.html" %}
 
 {% load staticfiles %}
 {% block content %}
@@ -41,7 +41,6 @@
                                     {% csrf_token %}
                                     <input class="form-control" name="name" placeholder="Your Name" type="text">
                                     <input class="form-control" name="subject" placeholder="Your Email" type="text">
-                                    <input class="form-control" name="website" placeholder="Your Website" type="text">
                                     <textarea class="form-control" placeholder="Your Message" name="message"></textarea>
                                     <button id="submit-button" class="small-button text-left">Send message</button>
                             </div>

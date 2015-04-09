@@ -1,0 +1,18 @@
+<!-- right content -->
+<div class="col-md-3 col-sm-3 blog-right">
+    <div class="sidepanel">
+
+        <div class="sidebar-block">
+            <h6 class="title ">Popular posts</h6>
+            <ul class="categories">
+                {%for post in popular%}
+                <li><a href="{% url "entry_detail" slug=post.slug %}">{{post.title}}</a><span>{{post.created}}</span></li>
+                {%endfor%}
+            </ul>
+        </div>
+
+
+
+    </div>
+</div>
+<!-- right content end -->

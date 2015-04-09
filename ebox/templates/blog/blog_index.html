@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load django_markdown %}
+
+
+{% block content %}
+
+
+<!-- blog listing -->
+            <section id="blog-list" class="blog-list white-bg blog-page">
+                <div class="container">
+                    <div class="row">
+                        <!-- left content area -->
+                        <div class="col-md-8 col-sm-8 blog-left">
+                            <div class="blog-listing">
+                                <ul class="blog-post">
+
+                                {% include "blog/blog_entries.html" %}
+
+                                </ul>
+                            </div>
+                            <!-- blog listing end -->
+                        </div>
+
+                        {% include "blog/sidebar.html" %}
+
+                    </div>
+                </div>
+
+
+            </section>
+            <!-- blog list end -->
+{% endblock content %}
+
+{% block footer-javascript %}
+    {{ block.super }}
+    <script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
+        <script>
+        $.endlessPaginate({
+            paginateOnScroll: true,
+        });
+    </script>
+{% endblock %}
