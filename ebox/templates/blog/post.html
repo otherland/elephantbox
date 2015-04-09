@@ -21,7 +21,7 @@
                                             <div class="blog-title"> <span class="medium light-gray">{{ object.created }}</span>
                                                 <h3 class="title "><a href="{% url "entry_detail" slug=object.slug %}">{{ object.title }}</a></h3>
                                                </div>
-                                            <article class="contentarea ">{{ object.body }}</article>
+                                            <article class="contentarea ">{{ object.body | markdown }}</article>
 
                                             <div class="blog-share">
                                                 <div class="blogpost_share">
