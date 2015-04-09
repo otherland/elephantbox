@@ -444,6 +444,7 @@ Version:1.0.0
 @media (max-width:430px) {
     .blog-details .blog-views { float: left; width: 100%; }
     .conter-box .col-md-3:nth-child(2) { margin-top: 9%; }
+    .description { line-height: 22px; font-size: 18px; }
 }
 @media (max-width:320px) {
     h5.title { font-size: 14px; }
