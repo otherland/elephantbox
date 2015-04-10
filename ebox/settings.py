@@ -118,8 +118,8 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'twittomyates@gmail.com'  # this is my email address, use yours
-EMAIL_HOST_PASSWORD = 'kendoll1'   # set environ yourself
+EMAIL_HOST_USER = None  # this is my email address, use yours
+EMAIL_HOST_PASSWORD = None # set environ yourself
 
 ADMINS = (
     ('Tom Yates', 'twittomyates@gmail.com'),   # email will be sent to your_email
