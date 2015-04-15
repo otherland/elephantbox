@@ -115,11 +115,12 @@ STATICFILES_DIRS = (
 )
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
+#USED FOR CONTACT PAGE
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = None  # this is my email address, use yours
-EMAIL_HOST_PASSWORD = None # set environ yourself
+EMAIL_HOST_USER = os.environ.get('GMAIL_USERNAME')
+EMAIL_HOST_PASSWORD = os.environ.get('GMAIL_PASSWORD')
 
 ADMINS = (
     ('Tom Yates', 'twittomyates@gmail.com'),   # email will be sent to your_email

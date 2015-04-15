@@ -18,10 +18,10 @@ def contact(request):
         if not payload['errors']:
           try:
             send_mail(
-                request.POST['subject'],
-                request.POST['message'],
-                request.POST.get('email', 'support@test.com'),
-                ['twittomyates@gmail.com'],
+                request.POST.get('subject'),
+                request.POST.get('message'),
+                request.POST.get('email', 'elephantboxuk@gmail.com'),
+                ['elephantboxuk@gmail.com'],
             )
             payload['success'] = True
           except Exception, err:
