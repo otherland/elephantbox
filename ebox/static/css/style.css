@@ -101,7 +101,7 @@ span.title { font-family: 'Oswald', sans-serif; font-size: 35px; font-weight: 30
 .fetaure-details span { font-weight: 300; }
 .count-box p { color: #fff; font-size: 16px; font-weight: 400; }
 .description { font-size: 18px; vertical-align: middle; display: table-cell; font-weight: 300 }
-.big { font-size: 45px; margin-bottom: 43px; line-height: 55px; }
+.big { font-size: 30px; margin-bottom: 43px; line-height: 45px; }
 .light { font-size: 20px; color: #5e5e5e; margin: 83px 0 0; }
 .light-gray { color: #909090 }
 .contact-title { font-size: 15px; font-weight: bold; display: table; margin-bottom: 6px; text-transform: uppercase; }
