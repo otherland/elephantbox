@@ -17,6 +17,8 @@ class EntryQuerySet(models.QuerySet):
 class Entry(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField()
+    embed_code = models.TextField(blank=True, help_text='The embed code for the video')
+    image_url = models.URLField(blank=True,help_text='The image url')
     slug = models.SlugField(max_length=200, unique=True)
     publish = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)

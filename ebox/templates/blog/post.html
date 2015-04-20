@@ -21,7 +21,17 @@
                                             <div class="blog-title"> <span class="medium light-gray">{{ object.created }}</span>
                                                 <h3 class="title "><a href="{% url "entry_detail" slug=object.slug %}">{{ object.title }}</a></h3>
                                                </div>
-                                            <article class="contentarea ">{{ object.body | markdown }}</article>
+                                            <article class="contentarea ">
+                                            <div>
+                                                {% if object.embed_code %}
+                                                    {{ object.embed_code | safe }}
+                                                {% endif %}
+                                            </div>
+                                            {%if object.image_url%}
+                                            <img style="min-width: 100%" src="{{object.image_url}}">
+                                            {%endif%}
+                                            <p>{{ object.body | markdown }}</p>
+                                            </article>
 
                                             <div class="blog-share">
                                                 <div class="blogpost_share">
