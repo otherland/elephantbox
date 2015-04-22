@@ -30,7 +30,7 @@
                                             {%if object.image_url%}
                                             <img style="min-width: 100%" src="{{object.image_url}}">
                                             {%endif%}
-                                            <p>{{ object.body | markdown }}</p>
+                                            {{ object.body | markdown }}
                                             </article>
 
                                             <div class="blog-share">
