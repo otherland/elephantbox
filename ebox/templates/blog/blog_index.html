@@ -1,12 +1,36 @@
-{% extends "base.html" %}
 {% load django_markdown %}
 
+{% load staticfiles %}
 
-{% block content %}
+<!DOCTYPE html>
+<html class="" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
+        <title>{{title}}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="">
+        <link rel="stylesheet" type="text/css" href="{% static "css/css_002.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "css/css.css" %}">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static "css/animation.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "css/responsive.css" %}">
+
+
+
+    </head>
+
+   <body>
+        <!-- main page -->
+        <div class="main">
+
+        {% include "campaign/header.html" %}
 
 <!-- blog listing -->
             <section id="blog-list" class="blog-list white-bg blog-page">
+
                 <div class="container">
                     <div class="row">
                         <!-- left content area -->
@@ -26,17 +50,35 @@
                     </div>
                 </div>
 
-
             </section>
             <!-- blog list end -->
-{% endblock content %}
 
-{% block footer-javascript %}
-    {{ block.super }}
+
+        {% include "campaign/footer.html" %}
+
+
+            <!-- scroll to top -->
+            <a style="display: inline;" href="javascript:;" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
+            <!-- scroll to top End... -->
+
+        </div>
+        <!-- main page end -->
+        <!-- javascript  -->
+        <!-- Placed at the End of the document so the pages load faster -->
+        <!-- jQuery -->
+
+
+        <!-- custom javascript  -->
+        <script src="{% static "js/custom.js" %}"></script>
+        <!-- bootstrap  -->
+        <script src="{% static "js/bootstrap-custom.js" %}"></script>
+
     <script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
         <script>
         $.endlessPaginate({
             paginateOnScroll: true,
         });
     </script>
-{% endblock %}
+
+
+</body></html>

@@ -134,7 +134,7 @@ span.title { font-family: 'Oswald', sans-serif; font-size: 35px; font-weight: 30
 .white-bg { background-color: #ffffff; }
 .red-bg { background-color: #d52124; }
 .black-transparent-bg { background-color: rgba(0, 0, 0, 0.8) }
-.color-overlay { background-color: rgba(0, 0, 0, 0.70); position: relative; height: 100%; width: 100% }
+.color-overlay { background-color: rgba(0, 0, 0, 0); position: relative; height: 100%; width: 100% }
 .black-overlay { background-color: rgba(0, 0, 0, 0.55); position: absolute; height: 100%; width: 100%; top: 0; left: 0 }
 .black-overlay-dark { background-color: rgba(0, 0, 0, 0.70); position: absolute; height: 100%; width: 100%; top: 0; left: 0; z-index: 1; }
 .gradient-overlay { background: rgba(249, 96, 21, 0.95); background: -moz-linear-gradient(left, rgba(249, 96, 21, 0.95) 0%, rgba(225, 40, 15, 0.80) 100%); background: -webkit-gradient(left top, right top, color-stop(0%, rgba(249, 96, 21, 0.95)), color-stop(100%, rgba(225, 40, 15, 0.80))); background: -webkit-linear-gradient(left, rgba(249, 96, 21, 0.95) 0%, rgba(225, 40, 15, 0.80) 100%); background: -o-linear-gradient(left, rgba(249, 96, 21, 0.95) 0%, rgba(225, 40, 15, 0.80) 100%); background: -ms-linear-gradient(left, rgba(249, 96, 21, 0.95) 0%, rgba(225, 40, 15, 0.80) 100%); background: linear-gradient(to right, rgba(249, 96, 21, 0.95) 0%, rgba(225, 40, 15, 0.80) 100%); }
@@ -322,7 +322,7 @@ nav { width: 100%; top: 0px; z-index: 99; padding-top: 25px; padding-bottom: 10p
 
 /* Main Navigation */
 .logo-light { display: inline-block; float: none }
-.navbar-fixed-top .nav > li > a:hover { color: #FFF; }
+.navbar-fixed-top .nav > li > a:hover { color: #000; }
 .shrink-nav .logo-light { display: none; }
 .shrink-nav .logo-dark { display: inline-block; }
 .logo-dark { width: 200px; }
@@ -795,6 +795,7 @@ canvas { width: 63%; }
 
 /* Book a Table */
 .book { background: url() no-repeat center top fixed; -webkit-background-size: cover; background-size: cover; }
-.book-a-table { background: none repeat scroll 0 0 rgba(51, 0, 51, 0.6); padding: 50px; float: none; margin: 75px auto 0; font-size: 55px; line-height: 65px; font-weight: 100; color: #FFF; }
+/*.book-a-table { background: none repeat scroll 0 0 rgba(51, 0, 51, 0.6); padding: 50px; float: none; margin: 75px auto 0; font-size: 55px; line-height: 65px; font-weight: 100; color: #FFF; }*/
+.book-a-table { background: none repeat scroll 0 0 ; padding: 50px; float: none; margin: 75px auto 0; font-size: 55px; line-height: 65px; font-weight: 100; color: #FFF; }
 .book-a-table .highlight-button { font-size: 35px; font-weight: 500; background-color: #fff; color: #c70900; margin-top: 35px; display: inline-block; letter-spacing: 0; padding: 5px 35px; }
 #book .color-overlay { padding-top: 129px; padding-bottom: 120px; background: none repeat scroll 0 0 #3b3b3b }

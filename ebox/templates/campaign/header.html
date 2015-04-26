@@ -3,20 +3,18 @@
             <header style="background-position: 50% 4328.5px; background: url({% static "img/header-img.jpg" %});" id="home" data-stellar-background-ratio="0.5" class="header">
                 <nav class="navbar navbar-default navbar-fixed-top nav-transparent overlay-nav sticky-nav shrink-nav" role="navigation">
                     <div class="container main-navigation">
-                        <div class="col-md-3 float-left"> <a class="logo-dark" href="{% url 'index' %}"><img alt="logo-dark" src="{% static "img/logo-dark.png" %}" class="logo-dark"></a> <a class="logo-light" href="{% url 'index' %}"><img alt="logo-white" src="{% static "img/logo-white.png" %}" class="logo-white"></a> </div>
+                        <div class="col-md-3 float-left"> <a class="logo-dark" href="{% url 'index' %}"><img alt="logo-dark" src="{% static "img/logo-dark.png" %}" class="logo-dark"></a> <a class="logo-light" href="{% url 'index' %}"><img alt="logo-white" src="{% static "img/logo-dark.png" %}" class="logo-white"></a> </div>
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle Navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                         </div>
                         <div class="col-md-9 text-left float-right collapse-navation">
                             <div class="navbar-collapse collapse navbar-inverse no-transition">
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li class=""><a id="nav-work" href="{% url 'shop' %}">Buy</a></li>
-                                    <li class=""><a id="nav-about" href="{% url 'about' %}">About</a></li>
-                                    <li class=""><a id="nav-expertise" href="{% url 'faq' %}">FAQ</a></li>
-                                    <!--li class=""><a id="nav-team" href="{% url 'care' %}">Customer Care</a></li-->
-                                    <li class=""><a id="nav-blog" href="{% url 'blog' %}">Blog</a></li>
-                                    <!--li class=""><a id="nav-giving" href="{% url 'giving' %}">Giving Back</a></li-->
-                                    <li class=""><a id="nav-contact" href="{% url 'contact' %}">Contact</a></li>
+                                    <li class=""><a href="{% url 'index' %}#info">Buy</a></li>
+                                    <li class=""><a id="nav-about" href="{% url 'index' %}#about">About</a></li>
+                                    <li class=""><a id="nav-expertise" href="{% url 'index' %}#faq">FAQ</a></li>
+                                    <li class=""><a id="nav-blog" href="{% url 'blog' %}#blog-list">Blog</a></li>
+                                    <li class=""><a id="nav-contact" href="{% url 'index' %}#contact-box">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -43,9 +41,7 @@
 
 <div class="row text-center">
     <div class="col-md-8 col-sm-8 book-a-table">
-            We're almost ready...<br>
-            <!--a href="https://www.crowdfunder.com/" target="_blank" class="highlight-button inner-link" id="preorder">Pre-Order Now!</a-->
-            <!--a href="{% url "shop" %}" class="highlight-button inner-link" id="preorder">Pre-Order Now!</a-->
+            <strong>We're almost ready...</strong>
         </div>
     </div>
 </div>
