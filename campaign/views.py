@@ -30,9 +30,8 @@ def contact(request):
     return render(request, 'campaign/contact.html', payload)
 
 def index(request):
-    template = loader.get_template('campaign/index.html')
-    context = {'title':'Elephant Box | Home'}
-    return HttpResponse(template.render(context))
+    payload = {'title':'Elephant Box | Home'}
+    return render(request, 'campaign/index.html', payload)
 
 def about(request):
     template = loader.get_template('campaign/about.html')
